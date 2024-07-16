@@ -1,0 +1,42 @@
+/* index.css */
+
+/* Apply Tailwind base styles */
+@tailwind base;
+
+/* Define light theme variables */
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #333333;
+  /* Add more theme variables as needed */
+}
+
+/* Define dark theme variables */
+:root[data-theme="dark"] {
+  --bg-color-dark: #1a202c;
+  --text-color-dark: #ffffff;
+  /* Add more dark theme variables as needed */
+}
+
+/* Apply Tailwind components */
+@tailwind components;
+
+/* Apply Tailwind utilities */
+@tailwind utilities;
+
+/* Global body styling */
+body[data-theme="dark"] {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+body[data-theme="light"] {
+  background-color: var(--bg-color-light); /* Default to light theme */
+  color: var(--text-color-light); /* Default to light theme */
+}
+
+/* Toggle between light and dark themes */
+
+/* Example of component-specific styling based on theme */
+/* .navbar {
+  background-color: var(--bg-color-light); 
+  color: var(--text-color-light); 
+} */
